@@ -1,0 +1,18 @@
+<div id="about">
+  {{#if results}}
+    <span class="dashed-border">
+      Twitter Search Results :
+    </span>
+    <ol class="listno">
+      {{#each results}}
+        <li>
+          <p>{{{text}}}. <a href="{{unescapedUrl}}" target="_blank">{{unescapedUrl}}</a></p>
+        </li>
+      {{/each}}
+    </ol>
+  {{else}}
+    <span class="dashed-border">
+      No results found
+    </span>
+  {{/if}}
+</div>

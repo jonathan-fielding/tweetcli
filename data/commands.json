@@ -1,0 +1,89 @@
+{
+  "help": [
+    {
+      "command": "about",
+      "alias": "(abt)",
+      "parameters": "[no parameters]",
+      "description": "read more about me",
+      "module": "Pages",
+      "action": "View",
+      "params" : {
+        "template" : "about"
+      }
+    },
+    {
+      "command": "clear",
+      "alias": "(cl,cls)",
+      "parameters": "[no parameters]",
+      "description": "clear the screen",
+      "module": "Command",
+      "action": "clear",
+      "params" : ""
+    },
+    {
+      "command": "credits",
+      "alias": "(crts)",
+      "parameters": "[no parameters]",
+      "description": "credits on this project",
+      "module": "Pages",
+      "action": "View",
+      "params": {
+        "template": "credits"
+      }
+    },
+    {
+      "command": "help",
+      "alias": "(man,ls,h,?)",
+      "parameters": "[command]",
+      "description": "displays help text",
+      "module": "Command",
+      "action": "View",
+      "params": ""
+    },
+    {
+      "command": "search",
+      "alias": "(ts)",
+      "parameters": "[keywords]",
+      "description": "Command to search twitter",
+      "module": "tweetsearch",
+      "action": "View",
+      "params": ""
+    },
+    {
+      "command": "feed",
+      "alias": "(ts)",
+      "parameters": "[user]",
+      "description": "Command to get a users feed",
+      "module": "tweetfeed",
+      "action": "View",
+      "params": ""
+    },
+    {
+      "command": "authenticate",
+      "alias": "(auth)",
+      "parameters": "[none]",
+      "description": "Authenticate you as the user",
+      "module": "tweetfeed",
+      "action": "View",
+      "params": ""
+    },
+    {
+      "command": "tweet",
+      "alias": "(ts)",
+      "parameters": "[tweet]",
+      "description": "Create new tweet (requires authentication)",
+      "module": "tweetfeed",
+      "action": "View",
+      "params": ""
+    },
+    {
+      "command": "mentions",
+      "alias": "(ts)",
+      "parameters": "[mentions]",
+      "description": "Get logged in users mentions (requires authentication)",
+      "module": "tweetfeed",
+      "action": "View",
+      "params": ""
+    }
+  ]
+}
