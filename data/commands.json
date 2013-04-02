@@ -58,32 +58,5 @@
       "action": "View",
       "params": ""
     }
-    // {
-    //   "command": "authenticate",
-    //   "alias": "(auth)",
-    //   "parameters": "[none]",
-    //   "description": "Authenticate you as the user",
-    //   "module": "tweetfeed",
-    //   "action": "View",
-    //   "params": ""
-    // },
-    // {
-    //   "command": "tweet",
-    //   "alias": "(ts)",
-    //   "parameters": "[tweet]",
-    //   "description": "Create new tweet (requires authentication)",
-    //   "module": "tweetfeed",
-    //   "action": "View",
-    //   "params": ""
-    // },
-    // {
-    //   "command": "mentions",
-    //   "alias": "(ts)",
-    //   "parameters": "[mentions]",
-    //   "description": "Get logged in users mentions (requires authentication)",
-    //   "module": "tweetfeed",
-    //   "action": "View",
-    //   "params": ""
-    // }
   ]
 }
