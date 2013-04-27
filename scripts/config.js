@@ -5,7 +5,7 @@
 require.config({
 
   // Initialize the application with the main application file.
-  deps: ['main', 'command', 'introduction', 'input', 'pages', 'utility', 'calc','tweetsearch','tweetfeed'],
+  deps: ['main', 'command', 'introduction', 'input', 'pages', 'utility', 'calc','tweetsearch','tweetfeed','authenticate','tweet'],
 
   paths: {
     // JavaScript folders.
@@ -24,7 +24,9 @@ require.config({
     tweetfeed: '../scripts/modules/tweetfeed',
     pages: '../scripts/modules/pages',
     calc: '../scripts/modules/calc',
-    utility: '../scripts/plugins/utility'
+    utility: '../scripts/plugins/utility',
+    authenticate: '../scripts/modules/authenticate',
+    tweet: '../scripts/modules/tweet'
   },
 
   shim: {

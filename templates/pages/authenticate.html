@@ -1,0 +1,12 @@
+<div id="about">
+  {{#if results}}
+    <span class="dashed-border">
+      {{results}}
+    </span>
+
+  {{else}}
+    <span id="clickToAuthenticate" class="dashed-border">
+      <p>To authenticate with twitter we need you to allow us to access your twitter account, you will be taken to twitter which will provide you with a pin, upon returning to tweetcli to complete authentication enter the command authenticate [pin].</p>
+    </span>
+  {{/if}}
+</div>

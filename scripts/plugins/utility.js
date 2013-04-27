@@ -35,6 +35,17 @@ function() {
 				async: false,
 				dateType: 'JSON'
 			});
+    },
+    getItemFromString: function(string, required){
+        var sVariables = string.split('&');
+        for (var i = 0; i < sVariables.length; i++) 
+        {
+            var sParameterName = sVariables[i].split('=');
+            if (sParameterName[0] == required) 
+            {
+                return sParameterName[1];
+            }
+        }
     }
   };
 

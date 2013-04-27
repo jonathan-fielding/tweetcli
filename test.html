@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script language=javascript>
+      var txt='oauth_token=u1REDhV9l1dPlmXBD6vcSiAXaVYUs1ChIF4aeKU18Nc&oauth_token_secret=NKuuv2oJmAZ4axZvZmsd5qkc5JD3Xd4Qs0yqyrJxedc&oauth_callback_confirmed=true "';
+
+      var re1='.*?';  // Non-greedy match on filler
+      var re2='(?:[a-z][a-z]*[0-9]+[a-z0-9]*)'; // Uninteresting: alphanum
+      var re3='.*?';  // Non-greedy match on filler
+      var re4='((?:[a-z][a-z]*[0-9]+[a-z0-9]*))'; // Alphanum 1
+
+      var p = new RegExp(re1+re2+re3+re4,["i"]);
+      var m = p.exec(txt);
+      if (m != null)
+      {
+          var alphanum1=m[1];
+          document.write("("+alphanum1.replace(/</,"&lt;")+")"+"\n");
+      }
+    </script>
+  </body>
+</html>
