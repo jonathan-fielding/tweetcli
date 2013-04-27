@@ -2,7 +2,7 @@
 /*jslint browser:true, devel:true, unused:false */
 
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-3144580-7']);
+_gaq.push(['_setAccount', 'UA-40491476-1']);
 _gaq.push(['_trackPageview']);
 
 /**
