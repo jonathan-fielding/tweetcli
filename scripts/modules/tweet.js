@@ -17,9 +17,12 @@ function(Backbone, Utility) {
     initialize: function(options, settings) {
       //Get request code
   
-      if(settings.length > 0){
+      if(settings.length > 0 && settings.length <= 140){
         this.result = "Tweeting...";
         this.sendTweet(settings);
+      }
+      else if(settings.length > 140){
+        this.result = "Tweets must be less than 140 chars long";
       }
     },
 
