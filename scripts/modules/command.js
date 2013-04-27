@@ -79,7 +79,7 @@ function(Backbone, App, Introduction) {
             }
           });
 
-          //App.router.navigate(''/#' + command.c', {trigger: false});
+          App.router.navigate(''/#' + command.c', {trigger: false});
 
         } else {
           // Command Not Found
