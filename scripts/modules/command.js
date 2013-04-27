@@ -91,7 +91,7 @@ function(Backbone, App, Introduction) {
       isValid: function(command) {
         var commandParams;
         return Command.CommandCollection.filter(function(data) {
-          commandParams = command.c.match(/\b[a-z]+\b/gi);
+          commandParams = command.c.split(" ");
           command.c = commandParams[0];
           commandParams.splice(0,1);
           command.p = commandParams.join(' ');
@@ -102,7 +102,7 @@ function(Backbone, App, Introduction) {
       getArgs: function(comm) {
         var commandArgs;
         if (comm) {
-          commandArgs = comm.match(/\b[\S]+\b/gi);
+          commandArgs = comm.split(" ");
           commandArgs.splice(0, 1);
           return commandArgs.join(' ');
         }
