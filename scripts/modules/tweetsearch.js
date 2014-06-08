@@ -11,7 +11,7 @@ function(Backbone, App, $) {
 
 	var tweetsearch = {};
 
-	tweetsearch.endpoint = 'http://search.twitter.com/search.json?&rpp=5&include_entities=true&result_type=mixed&callback=?';
+	tweetsearch.endpoint = "https://query.yahooapis.com/v1/public/yql?q=";
 
 	tweetsearch.Model = Backbone.Model.extend({
 		defaults: {
@@ -33,11 +33,16 @@ function(Backbone, App, $) {
 		//url: Google.endpoint,
 
 		parse: function(response) {
-				return response.results;
+
+				return response.query.results.json.statuses;
 		},
 		setKeyword: function(k) {
 				var _this = this;
-				var urlString = tweetsearch.endpoint + '&q=' + k;
+				var oauth_token = localStorage.getItem('oauth_token');
+      			var oauth_token_secret = localStorage.getItem('oauth_token_secret');
+				var query = 'SELECT * FROM twitter.search.tweets WHERE q="'+k+'" AND consumer_key="cfxYRuFkkcLqLXg9ukTGmA" AND consumer_secret="XBg6tuWyqo991fCfsk0gMFXhg0ilZ9pjgQuxuceen8" AND access_token="'+ oauth_token+'" AND access_token_secret="'+ oauth_token_secret+'"';
+				var urlString = tweetsearch.endpoint + encodeURIComponent(query) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=?";
+
 				this.reset();
 				this.url = urlString;
 				this.fetch();

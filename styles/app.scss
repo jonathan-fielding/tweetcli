@@ -56,14 +56,23 @@ a, a:visited, a:active {
 }
 
 
-#output{
-  min-height:10px;
+.command-wrap{
+  position: relative;
+
+  .prompt-wrap{
+    position: absolute;
+  }
+
+  .input-wrap{
+    padding-left: 120px;
+  }
 }
+
 #input {
   #inputfield{
     color:$white;
     background-color:$background;
-    width:700px;
+    width:100%;
     border:none;
     outline: 0;
     vertical-align: baseline;
